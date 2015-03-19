@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DuiLib", "DuiLib\DuiLib.vcxproj", "{E106ACD7-4E53-4AEE-942B-D0DD426DB34E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Win32Project1", "Win32Project1\Win32Project1.vcxproj", "{4085A263-F1C1-4670-9FBD-8D7433ACEFC6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "airdroid", "airdroid\airdroid.vcxproj", "{19CEC743-3655-44C0-A08C-23D70EACE9CA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Win32Project2", "Win32Project2\Win32Project2.vcxproj", "{96AFE256-9154-40D7-B1C5-267359A57F88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		UnicodeDebug|Win32 = UnicodeDebug|Win32
+		UnicodeRelease|Win32 = UnicodeRelease|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E106ACD7-4E53-4AEE-942B-D0DD426DB34E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E106ACD7-4E53-4AEE-942B-D0DD426DB34E}.Debug|Win32.Build.0 = Debug|Win32
+		{E106ACD7-4E53-4AEE-942B-D0DD426DB34E}.Release|Win32.ActiveCfg = Release|Win32
+		{E106ACD7-4E53-4AEE-942B-D0DD426DB34E}.Release|Win32.Build.0 = Release|Win32
+		{E106ACD7-4E53-4AEE-942B-D0DD426DB34E}.UnicodeDebug|Win32.ActiveCfg = UnicodeDebug|Win32
+		{E106ACD7-4E53-4AEE-942B-D0DD426DB34E}.UnicodeDebug|Win32.Build.0 = UnicodeDebug|Win32
+		{E106ACD7-4E53-4AEE-942B-D0DD426DB34E}.UnicodeRelease|Win32.ActiveCfg = UnicodeRelease|Win32
+		{E106ACD7-4E53-4AEE-942B-D0DD426DB34E}.UnicodeRelease|Win32.Build.0 = UnicodeRelease|Win32
+		{4085A263-F1C1-4670-9FBD-8D7433ACEFC6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4085A263-F1C1-4670-9FBD-8D7433ACEFC6}.Debug|Win32.Build.0 = Debug|Win32
+		{4085A263-F1C1-4670-9FBD-8D7433ACEFC6}.Release|Win32.ActiveCfg = Release|Win32
+		{4085A263-F1C1-4670-9FBD-8D7433ACEFC6}.Release|Win32.Build.0 = Release|Win32
+		{4085A263-F1C1-4670-9FBD-8D7433ACEFC6}.UnicodeDebug|Win32.ActiveCfg = Debug|Win32
+		{4085A263-F1C1-4670-9FBD-8D7433ACEFC6}.UnicodeDebug|Win32.Build.0 = Debug|Win32
+		{4085A263-F1C1-4670-9FBD-8D7433ACEFC6}.UnicodeRelease|Win32.ActiveCfg = Release|Win32
+		{4085A263-F1C1-4670-9FBD-8D7433ACEFC6}.UnicodeRelease|Win32.Build.0 = Release|Win32
+		{19CEC743-3655-44C0-A08C-23D70EACE9CA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{19CEC743-3655-44C0-A08C-23D70EACE9CA}.Debug|Win32.Build.0 = Debug|Win32
+		{19CEC743-3655-44C0-A08C-23D70EACE9CA}.Release|Win32.ActiveCfg = Release|Win32
+		{19CEC743-3655-44C0-A08C-23D70EACE9CA}.Release|Win32.Build.0 = Release|Win32
+		{19CEC743-3655-44C0-A08C-23D70EACE9CA}.UnicodeDebug|Win32.ActiveCfg = Debug|Win32
+		{19CEC743-3655-44C0-A08C-23D70EACE9CA}.UnicodeDebug|Win32.Build.0 = Debug|Win32
+		{19CEC743-3655-44C0-A08C-23D70EACE9CA}.UnicodeRelease|Win32.ActiveCfg = Release|Win32
+		{19CEC743-3655-44C0-A08C-23D70EACE9CA}.UnicodeRelease|Win32.Build.0 = Release|Win32
+		{96AFE256-9154-40D7-B1C5-267359A57F88}.Debug|Win32.ActiveCfg = Debug|Win32
+		{96AFE256-9154-40D7-B1C5-267359A57F88}.Debug|Win32.Build.0 = Debug|Win32
+		{96AFE256-9154-40D7-B1C5-267359A57F88}.Release|Win32.ActiveCfg = Release|Win32
+		{96AFE256-9154-40D7-B1C5-267359A57F88}.Release|Win32.Build.0 = Release|Win32
+		{96AFE256-9154-40D7-B1C5-267359A57F88}.UnicodeDebug|Win32.ActiveCfg = Debug|Win32
+		{96AFE256-9154-40D7-B1C5-267359A57F88}.UnicodeDebug|Win32.Build.0 = Debug|Win32
+		{96AFE256-9154-40D7-B1C5-267359A57F88}.UnicodeRelease|Win32.ActiveCfg = Release|Win32
+		{96AFE256-9154-40D7-B1C5-267359A57F88}.UnicodeRelease|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
