@@ -2,6 +2,7 @@
 #include "MainDialog.h"
 #include "airMan.h"
 #include "MenuWnd.h"
+#include "../FlashDemo/flash10a.tlh"
 
 void    CMainDialog::Notify(TNotifyUI& msg) 
 {
@@ -42,6 +43,21 @@ void    CMainDialog::Notify(TNotifyUI& msg)
 
 		pMenu->Init(*this, pt);
 		pMenu->ShowWindow(TRUE);
+	}
+	else if( msg.sType == _T("showactivex") ) {
+		if( msg.pSender->GetName() != _T("flash") ) return;
+		IShockwaveFlash* pFlash = NULL;
+		CActiveXUI* pActiveX = static_cast<CActiveXUI*>(msg.pSender);
+		pActiveX->GetControl(IID_IUnknown, (void**)&pFlash);
+		if( pFlash != NULL ) {
+			pFlash->put_WMode( _bstr_t(_T("Transparent") ) );
+			pFlash->put_Movie( _bstr_t(CPaintManagerUI::GetInstancePath() + _T("flash.swf")) );
+			pFlash->DisableLocalSecurity();
+			pFlash->put_AllowScriptAccess(L"always");
+			BSTR response;
+			pFlash->CallFunction(L"<invoke name=\"setButtonText\" returntype=\"xml\"><arguments><string>Click me!</string></arguments></invoke>", &response);
+			pFlash->Release();
+		}  
 	}
 }
 
