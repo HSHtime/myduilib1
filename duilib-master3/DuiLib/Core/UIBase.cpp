@@ -32,14 +32,14 @@ LPCTSTR DUI__TraceMsg(UINT uMsg)
     MSGDEF(WM_NCPAINT);
     MSGDEF(WM_PAINT);
     MSGDEF(WM_ERASEBKGND);
-    MSGDEF(WM_NCMOUSEMOVE);  
+    MSGDEF(WM_NCMOUSEMOVE);
     MSGDEF(WM_MOUSEMOVE);
     MSGDEF(WM_MOUSELEAVE);
-    MSGDEF(WM_MOUSEHOVER);   
+    MSGDEF(WM_MOUSEHOVER);
     MSGDEF(WM_NOTIFY);
     MSGDEF(WM_COMMAND);
     MSGDEF(WM_MEASUREITEM);
-    MSGDEF(WM_DRAWITEM);   
+    MSGDEF(WM_DRAWITEM);
     MSGDEF(WM_LBUTTONDOWN);
     MSGDEF(WM_LBUTTONUP);
     MSGDEF(WM_LBUTTONDBLCLK);
@@ -47,7 +47,7 @@ LPCTSTR DUI__TraceMsg(UINT uMsg)
     MSGDEF(WM_RBUTTONUP);
     MSGDEF(WM_RBUTTONDBLCLK);
     MSGDEF(WM_SETFOCUS);
-    MSGDEF(WM_KILLFOCUS);  
+    MSGDEF(WM_KILLFOCUS);
     MSGDEF(WM_MOVE);
     MSGDEF(WM_SIZE);
     MSGDEF(WM_SIZING);
@@ -55,7 +55,7 @@ LPCTSTR DUI__TraceMsg(UINT uMsg)
     MSGDEF(WM_GETMINMAXINFO);
     MSGDEF(WM_CAPTURECHANGED);
     MSGDEF(WM_WINDOWPOSCHANGED);
-    MSGDEF(WM_WINDOWPOSCHANGING);   
+    MSGDEF(WM_WINDOWPOSCHANGING);
     MSGDEF(WM_NCCALCSIZE);
     MSGDEF(WM_NCCREATE);
     MSGDEF(WM_NCDESTROY);
@@ -75,12 +75,12 @@ LPCTSTR DUI__TraceMsg(UINT uMsg)
     MSGDEF(WM_CREATE);
     MSGDEF(WM_NCACTIVATE);
     MSGDEF(WM_ACTIVATE);
-    MSGDEF(WM_ACTIVATEAPP);   
+    MSGDEF(WM_ACTIVATEAPP);
     MSGDEF(WM_CLOSE);
     MSGDEF(WM_DESTROY);
-    MSGDEF(WM_GETICON);   
+    MSGDEF(WM_GETICON);
     MSGDEF(WM_GETTEXT);
-    MSGDEF(WM_GETTEXTLENGTH);   
+    MSGDEF(WM_GETTEXTLENGTH);
     static TCHAR szMsg[10];
     ::wsprintf(szMsg, _T("0x%04X"), uMsg);
     return szMsg;
@@ -214,9 +214,9 @@ CWindowWnd::CWindowWnd() : m_hWnd(NULL), m_OldWndProc(::DefWindowProc), m_bSubcl
 {
 }
 
-HWND CWindowWnd::GetHWND() const 
-{ 
-    return m_hWnd; 
+HWND CWindowWnd::GetHWND() const
+{
+    return m_hWnd;
 }
 
 UINT CWindowWnd::GetClassStyle() const
@@ -412,7 +412,7 @@ LRESULT CALLBACK CWindowWnd::__WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
         pThis = static_cast<CWindowWnd*>(lpcs->lpCreateParams);
         pThis->m_hWnd = hWnd;
         ::SetWindowLongPtr(hWnd, GWLP_USERDATA, reinterpret_cast<LPARAM>(pThis));
-    } 
+    }
     else {
         pThis = reinterpret_cast<CWindowWnd*>(::GetWindowLongPtr(hWnd, GWLP_USERDATA));
         if( uMsg == WM_NCDESTROY && pThis != NULL ) {
@@ -420,13 +420,13 @@ LRESULT CALLBACK CWindowWnd::__WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPAR
             ::SetWindowLongPtr(pThis->m_hWnd, GWLP_USERDATA, 0L);
             if( pThis->m_bSubclassed ) pThis->Unsubclass();
             pThis->m_hWnd = NULL;
-            pThis->OnFinalMessage(hWnd);
+	            pThis->OnFinalMessage(hWnd);
             return lRes;
         }
     }
     if( pThis != NULL ) {
         return pThis->HandleMessage(uMsg, wParam, lParam);
-    } 
+    }
     else {
         return ::DefWindowProc(hWnd, uMsg, wParam, lParam);
     }
@@ -440,7 +440,7 @@ LRESULT CALLBACK CWindowWnd::__ControlProc(HWND hWnd, UINT uMsg, WPARAM wParam, 
         pThis = static_cast<CWindowWnd*>(lpcs->lpCreateParams);
         ::SetProp(hWnd, _T("WndX"), (HANDLE) pThis);
         pThis->m_hWnd = hWnd;
-    } 
+    }
     else {
         pThis = reinterpret_cast<CWindowWnd*>(::GetProp(hWnd, _T("WndX")));
         if( uMsg == WM_NCDESTROY && pThis != NULL ) {
@@ -454,7 +454,7 @@ LRESULT CALLBACK CWindowWnd::__ControlProc(HWND hWnd, UINT uMsg, WPARAM wParam, 
     }
     if( pThis != NULL ) {
         return pThis->HandleMessage(uMsg, wParam, lParam);
-    } 
+    }
     else {
         return ::DefWindowProc(hWnd, uMsg, wParam, lParam);
     }
@@ -464,7 +464,7 @@ LRESULT CWindowWnd::SendMessage(UINT uMsg, WPARAM wParam /*= 0*/, LPARAM lParam 
 {
     ASSERT(::IsWindow(m_hWnd));
     return ::SendMessage(m_hWnd, uMsg, wParam, lParam);
-} 
+}
 
 LRESULT CWindowWnd::PostMessage(UINT uMsg, WPARAM wParam /*= 0*/, LPARAM lParam /*= 0*/)
 {

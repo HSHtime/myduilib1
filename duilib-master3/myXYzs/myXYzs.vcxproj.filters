@@ -24,6 +24,21 @@
     <ClInclude Include="DialogBuilderCBEx.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ClearRbPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolsPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FeedbackWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WebPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyWebHandle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainDialog.cpp">
@@ -33,6 +48,21 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="DialogBuilderCBEx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ClearRbPage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolsPage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FeedbackWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WebPage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyWebHandle.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

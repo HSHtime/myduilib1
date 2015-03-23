@@ -1,15 +1,16 @@
 #pragma once
-#include "stdafx.h"
-#include "WebPage.h"
-#include "MyWebHandle.h"
 
-class CMainDialog :
+
+class CFeedbackWnd:
 	public CWindowWnd, public INotifyUI
 {
-	virtual LPCTSTR GetWindowClassName() const { return _T("DUIMainFrame"); }
+public:
+	virtual LPCTSTR GetWindowClassName() const { return _T("DUIFeedbackWnd"); }
+
+
 	virtual void    Notify(TNotifyUI& msg) ;
 	virtual LRESULT HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam);
-
+	//virtual LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, bool& bHandled);
 	LRESULT OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 	LRESULT OnClose(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 	LRESULT OnDestroy(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
@@ -20,7 +21,7 @@ class CMainDialog :
 	LRESULT OnNcPaint(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 	LRESULT OnNcCalcSize(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 protected:
+	//virtual ~CFeedbackWnd(){};
 	CPaintManagerUI m_PaintManager;
-	CWebPage *m_pWebPage;
-	CMyWebHandle *pWebhandle;
 };
+

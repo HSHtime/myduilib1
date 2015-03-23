@@ -11,14 +11,24 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClearRbPage.h" />
     <ClInclude Include="DialogBuilderCBEx.h" />
+    <ClInclude Include="FeedbackWnd.h" />
     <ClInclude Include="MainDialog.h" />
+    <ClInclude Include="MyWebHandle.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="ToolsPage.h" />
+    <ClInclude Include="WebPage.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ClearRbPage.cpp" />
     <ClCompile Include="DialogBuilderCBEx.cpp" />
+    <ClCompile Include="FeedbackWnd.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainDialog.cpp" />
+    <ClCompile Include="MyWebHandle.cpp" />
+    <ClCompile Include="ToolsPage.cpp" />
+    <ClCompile Include="WebPage.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{71E12F14-33EF-45A1-92FA-3412AEBB4151}</ProjectGuid>
