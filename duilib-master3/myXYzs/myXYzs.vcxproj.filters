@@ -39,6 +39,15 @@
     <ClInclude Include="MyWebHandle.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="webkitDll.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="callback.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Base64Coder.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainDialog.cpp">
@@ -63,6 +72,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="MyWebHandle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Base64Coder.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

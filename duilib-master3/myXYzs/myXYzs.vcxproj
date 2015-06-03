@@ -11,6 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Base64Coder.h" />
+    <ClInclude Include="callback.h" />
     <ClInclude Include="ClearRbPage.h" />
     <ClInclude Include="DialogBuilderCBEx.h" />
     <ClInclude Include="FeedbackWnd.h" />
@@ -18,9 +20,11 @@
     <ClInclude Include="MyWebHandle.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="ToolsPage.h" />
+    <ClInclude Include="webkitDll.h" />
     <ClInclude Include="WebPage.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Base64Coder.cpp" />
     <ClCompile Include="ClearRbPage.cpp" />
     <ClCompile Include="DialogBuilderCBEx.cpp" />
     <ClCompile Include="FeedbackWnd.cpp" />
@@ -60,14 +64,21 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)bin</OutDir>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>E:\jsoncpp-src-0.5.0\build\vs71\debug\lib_json;E:\github\myduilib1\duilib-master3\bin;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\jsoncpp-src-0.5.0\include;E:\curl-7.42.1\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>webkitDll.lib;Shlwapi.lib;libcurl.lib;json_vc71_libmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

@@ -19,8 +19,10 @@ class CMainDialog :
 	LRESULT OnGetMinMaxInfo(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 	LRESULT OnNcPaint(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 	LRESULT OnNcCalcSize(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+	LRESULT setRequest();
 protected:
 	CPaintManagerUI m_PaintManager;
 	CWebPage *m_pWebPage;
 	CMyWebHandle *pWebhandle;
+	CWebBrowserUI* pActiveXUI;
 };
